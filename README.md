@@ -1,4 +1,4 @@
-# 🫁 Pneumo AI: Intelligent X-Ray Pneumonia Detection
+# Intelligent X-Ray Pneumonia Detection
 
 > **Empowering clinicians with fast, explainable, and accurate chest X-ray diagnostics.**
 
@@ -44,3 +44,29 @@ Ensure you have your `kaggle.json` API token ready. **Important:** You must visi
 2. Install the required dependencies:
    ```bash
    pip install torch torchvision transformers datasets accelerate timm kaggle pydicom opencv-python scikit-learn matplotlib seaborn grad-cam gradio
+
+
+### USAGE
+
+### Training the Model:
+Run the notebook cells sequentially. The training loop will automatically:
+
+Download and extract the RSNA dataset.
+
+Preprocess the images and generate a metadata CSV.
+
+Train the ResNet18 model across the specified epochs, evaluating Accuracy, Recall, F1-Score, and AUC.
+
+Save the best-performing weights as best_resnet18.pth.
+
+### Launching the Dashboard:
+Once the model is trained, simply execute the Gradio cell. It will generate a public link. You can share this link with others to access the web interface. Upload a .png or .jpg X-ray, and the dashboard will output the probability distribution between "Normal" and "Pneumonia".
+
+### FUTURE ROADMAP
+• Advanced Data Augmentation: Integrating more aggressive medical-specific augmentations (like elastic transforms) to improve generalization on edge cases.
+• Class Weighting: Implementing dynamically calculated loss weights to better handle the natural imbalance between negative and positive cases.
+• Cloud Deployment: Containerizing the Gradio app with Docker for permanent hosting on AWS or Google Cloud.
+
+ #### Disclaimer: This software is for educational and research purposes only. It is not intended to replace professional medical advice, diagnosis, or treatment.
+
+
