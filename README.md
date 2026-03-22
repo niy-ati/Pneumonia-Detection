@@ -64,7 +64,9 @@ Once the model is trained, simply execute the Gradio cell. It will generate a pu
 
 ### FUTURE ROADMAP
 • Advanced Data Augmentation: Integrating more aggressive medical-specific augmentations (like elastic transforms) to improve generalization on edge cases.
+
 • Class Weighting: Implementing dynamically calculated loss weights to better handle the natural imbalance between negative and positive cases.
+
 • Cloud Deployment: Containerizing the Gradio app with Docker for permanent hosting on AWS or Google Cloud.
 
  #### Disclaimer: This software is for educational and research purposes only. It is not intended to replace professional medical advice, diagnosis, or treatment.
